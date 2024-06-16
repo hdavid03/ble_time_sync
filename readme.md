@@ -4,7 +4,7 @@ The BLE Time Sync is a project that you can use to synchronize BLE WSNs (*Blueto
 The synchronization method is based on the PAwR (*Periodic Advertising with Responses*) feature of BLE
 as shown in the following figure.
 
-![Clock sync by PAwR](images/clock_sync.png)
+![Clock sync by PAwR](images/clock_sync.png =240x)
 
 ## Getting Started
 
@@ -30,21 +30,21 @@ You can import slcp files directly in Simplicity Studio.
 
 ## Clock Sync Process
 
-![Clock sync by PAwR](images/time_sync_seq.png)
+![Clock sync process - sequence diagram](images/time_sync_seq.png =220x)
 
-![Clock sync by PAwR](images/time_sync_fc.png)
+![Clock sync process - flow-chart](images/time_sync_fc.png =170x)
 
 ## Clock Sync Results
 
-![Clock sync by PAwR](images/clock_offs_per.png)
+![Clock sync results](images/clock_offs_per.png =320x)
 
 ## Class Diagrams
 
 ### For Gateway node
 
-![Clock sync by PAwR](images/gateway_class.png)
+![Gateway class diagram](images/gateway_class.png =260x)
 
 ### For Peripheral node
 
-![Clock sync by PAwR](images/sensor_class.png)
+![Peripheral class diagram](images/sensor_class.png =260x)
 
