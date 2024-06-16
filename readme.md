@@ -36,7 +36,7 @@ You can import slcp files directly in Simplicity Studio.
 
 ## Clock Sync Results
 
-![Clock sync results](images/clock_offs_per.png)
+![Clock sync results](images/clk_offs_per.png)
 
 ## Class Diagrams
 
