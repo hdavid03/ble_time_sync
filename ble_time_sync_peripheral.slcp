@@ -1,0 +1,56 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: ble_time_sync_peripheral
+label: BLE Time Sync - Peripheral node
+description: |
+  LFXO synchronization with PAwR (Periodic Advertising with Responses) - Peripheral application
+category: Bluetooth Examples
+filter:
+- name: Device Type
+  value: [SoC]
+- name: Project Difficulty
+  value: [Beginner]
+- name: Wireless Technology
+  value: [Bluetooth]
+package: Bluetooth
+quality: production
+readme:
+- {path: readme.md}
+source:
+- {path: src/ble_time_sync_peripheral.c}
+tag: ['hardware:rf:band:2400']
+include:
+- path: ''
+  file_list:
+  - {path: src/ble_time_sync.h}
+sdk: {id: gecko_sdk, version: 4.4.1}
+toolchain_settings: []
+component:
+- {id: app_assert}
+- {id: bluetooth_feature_connection}
+- {id: bluetooth_feature_gatt}
+- {id: bluetooth_feature_gatt_server}
+- {id: bluetooth_feature_legacy_advertiser}
+- {id: bluetooth_feature_legacy_scanner}
+- {id: bluetooth_feature_past_receiver}
+- {id: bluetooth_feature_pawr_sync}
+- {id: bluetooth_feature_sm}
+- {id: bluetooth_feature_system}
+- {id: bluetooth_stack}
+- {id: brd2601b}
+- {id: bt_post_build}
+- {id: component_catalog}
+- {id: gatt_configuration}
+- {id: gatt_service_device_information}
+- {id: mpu}
+- {id: rail_util_pti}
+configuration:
+- {name: SL_STACK_SIZE, value: '2752'}
+- {name: SL_HEAP_SIZE, value: '9200'}
+- condition: [psa_crypto]
+  name: SL_PSA_KEY_USER_SLOT_COUNT
+  value: '0'
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+  - {path: config/btconf/gatt_configuration.btconf}
+

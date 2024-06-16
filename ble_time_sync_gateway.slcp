@@ -1,0 +1,64 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: ble_time_sync_gateway
+label: BLE Time Sync - Gateway node
+description: |
+  LFXO synchronization with PAwR (Periodic Advertising with Responses) - Gateway application
+category: Bluetooth Examples
+filter:
+- name: Device Type
+  value: [SoC]
+- name: Project Difficulty
+  value: [Beginner]
+- name: Wireless Technology
+  value: [Bluetooth]
+package: Bluetooth
+quality: production
+readme:
+- {path: readme.md}
+source:
+- {path: src/ble_time_sync_gateway.c}
+tag: ['hardware:rf:band:2400']
+include:
+- path: ''
+  file_list:
+  - {path: src/ble_time_sync.h}
+  - {path: config/ble_time_sync_config.h}
+sdk: {id: gecko_sdk, version: 4.4.1}
+toolchain_settings: []
+component:
+- {id: app_assert}
+- {id: app_log}
+- {id: bluetooth_feature_advertiser_past}
+- {id: bluetooth_feature_connection}
+- {id: bluetooth_feature_connection_pawr_scheduling}
+- {id: bluetooth_feature_dynamic_gattdb}
+- {id: bluetooth_feature_extended_advertiser}
+- {id: bluetooth_feature_gatt}
+- {id: bluetooth_feature_legacy_advertiser}
+- {id: bluetooth_feature_legacy_scanner}
+- {id: bluetooth_feature_pawr_advertiser}
+- {id: bluetooth_feature_periodic_advertiser}
+- {id: bluetooth_feature_sm}
+- {id: bluetooth_feature_sync}
+- {id: bluetooth_feature_system}
+- {id: bluetooth_stack}
+- {id: brd2601b}
+- {id: bt_post_build}
+- {id: component_catalog}
+- {id: gpiointerrupt}
+- instance: [vcom]
+  id: iostream_usart
+- {id: iostream_usart_core}
+- {id: mpu}
+- {id: rail_util_pti}
+- {id: ustimer}
+configuration:
+- {name: SL_STACK_SIZE, value: '2752'}
+- {name: SL_HEAP_SIZE, value: '9200'}
+- condition: [psa_crypto]
+  name: SL_PSA_KEY_USER_SLOT_COUNT
+  value: '0'
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+
