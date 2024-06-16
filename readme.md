@@ -21,8 +21,8 @@ Developer guide: [UG434: Silicon Labs Bluetooth ® C Application Developer's Gui
 ## Example
 
 You can find example application project files (.slcp) and sources in the example folder:
-* **ble_wsn_ap** - project for central devices (access point)
-* **ble_wsn_pn** - project for peripheral device (peripheral node)
+* **ble_wsn_ap** - project for central device (access point)
+* **ble_wsn_pn** - project for peripheral devices (peripheral node)
 
 This example application works with only Thunderboard Dev Kit xg24, see [UG524: xG24 Dev Kit User's Guide](https://www.silabs.com/documents/public/user-guides/ug524-brd2601b-user-guide.pdf).
 
